@@ -1,5 +1,5 @@
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
