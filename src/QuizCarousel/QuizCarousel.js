@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react'
+import { Button } from 'reactstrap';
 
 import { Navigation } from "./Navigation"
 import { Question } from "./Question"
-
+import { SubmitModal } from "./SubmitModal"
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
@@ -14,6 +15,7 @@ export class QuizCarousel extends Component {
   state = {
     currentId: 1,
     characters: characters,
+    askToSubmitModal: false
   }
 
   componentDidMount(){
@@ -52,12 +54,19 @@ export class QuizCarousel extends Component {
       currentId: id
     })
   }
+
+  toggleSubmitModal = () => {
+    this.setState(prevState => ({
+      askToSubmitModal: !prevState.askToSubmitModal
+    }));
+  }
   
   render() {
     const {
       currentId,
       characters,
-      answers
+      answers,
+      askToSubmitModal
     } = this.state
   
     const currentCharacter = characters[currentId - 1]
@@ -88,6 +97,10 @@ export class QuizCarousel extends Component {
             <FaAngleRight className="arrow-button-right" />
           </button>
         </div>
+        <section id="submit-section">
+          <Button color="danger" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
+          <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal}/>
+        </section>
       </div>
     )
   }
