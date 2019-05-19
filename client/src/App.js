@@ -8,7 +8,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <h1><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg" /><FaRegCopyright/> Quiz</h1>
+      <h1><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg" /><FaRegCopyright/> CineQuiz</h1>
       <QuizCarousel/>
       <p>Created by Mark A.</p>
     </div>

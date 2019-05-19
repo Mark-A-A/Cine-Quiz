@@ -1,1 +1,1 @@
-Mark's Marvel CineQuiz
+Mark's CineQuiz
