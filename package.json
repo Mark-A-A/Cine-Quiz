@@ -1,0 +1,39 @@
+{
+  "name": "cine-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && yarn run start:prod || yarn run start:dev",
+    "start:prod": "node ./dist/server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn run client\"",
+    "start:server": "cd dist && node server.js",
+    "client": "cd client && yarn run start",
+    "install:client": "cd client && yarn",
+    "install:server": "yarn",
+    "build:server": "babel server --out-dir dist --extensions \".ts,.js\" --copy-files",
+    "build:client": "cd client && yarn run build",
+    "build": "yarn run install:server && yarn run build:server && yarn run install:client && yarn run build:client",
+    "seed": "cd server && cd config && node scripts/seedDB",
+    "restart": "yarn run build:server && yarn run start",
+    "heroku-postbuild": "yarn run build",
+    "rebuild:nodeSass": "cd client && yarn install --force node-sass"
+  },
+  "author": "Mark Awai",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4"
+  }
+}

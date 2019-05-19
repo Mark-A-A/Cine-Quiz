@@ -1,3 +1,13 @@
+
+
+# Node
+/node_modules
+/client/node_modules
+/dist
+.npm
+.env
+.jspm
+
 # Logs
 logs
 *.log
