@@ -27,13 +27,13 @@ export function Question({
         <h4>{question}</h4>
         <ul className="answer-choices">
           <li className="choice">
-            <input type="radio" name={currentId} value={choice1} onChange={onChooseAnswer} checked={userAnswer === choice1 }/> {choice1}<br/>
+            <input type="radio" id="choice-1" name={currentId} value={choice1} onChange={onChooseAnswer} checked={userAnswer === choice1} /> <label for="choice-1">{choice1}</label><br/>
           </li>
           <li className="choice">
-            <input type="radio" name={currentId} value={choice2} onChange={onChooseAnswer} checked={userAnswer === choice2} /> {choice2}<br/>
+            <input type="radio" id="choice-2" name={currentId} value={choice2} onChange={onChooseAnswer} checked={userAnswer === choice2} /> <label for="choice-2">{choice2}</label><br/>
           </li>
           <li className="choice">
-            <input type="radio" name={currentId} value={choice3} onChange={onChooseAnswer} checked={userAnswer === choice3} /> {choice3}<br/>
+            <input type="radio" id="choice-3" name={currentId} value={choice3} onChange={onChooseAnswer} checked={userAnswer === choice3} /><label for="choice-3">{choice3}</label><br/>
           </li>
         </ul>
       </div>
