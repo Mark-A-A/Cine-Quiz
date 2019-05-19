@@ -1,0 +1,12 @@
+.navigation-wrapper {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  
+  button {
+    width: 28px;
+  }
+  button.active{
+    background-color: red;
+  }
+}
