@@ -9,15 +9,25 @@
   box-shadow: 2px 2px 18px #888888;
 }
 .arrow-button-wrapper {
-  flex: 0 8%;
+  flex: 0 0 8%;
   // border: 2px solid black;
-  width: 100px;
+  // width: 100px;
   height: 300px;
   
-  button, img.arrow-button-left, img.arrow-button-right {
+  button {
+    padding: 0;
+    margin: 0;
     width: 100%;
     height:100%;
-  }
+
+    img.arrow-button-left, img.arrow-button-right {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 50%;
+    }
+
+  } 
 }
 
 .arrow-button-wrapper.left {
@@ -29,7 +39,7 @@
 }
 
 .quiz-body{
-  flex: 0 84%;
+  flex: 0 0 84%;
 
 }
 

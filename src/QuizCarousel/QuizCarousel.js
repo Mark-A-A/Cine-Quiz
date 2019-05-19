@@ -2,11 +2,11 @@
 import React, { Component, Fragment } from 'react'
 
 import { Navigation } from "./Navigation"
+import { Question } from "./Question"
 
 import characters from './marvel.json'
 
 import "./carousel.scss"
-
 export class QuizCarousel extends Component {
   state = {
     currentId: 1,
@@ -27,8 +27,6 @@ export class QuizCarousel extends Component {
   }
 
   setCharacter=(id)=>{
-
-    console.log("setting character =>", id)
     this.setState({
       currentId: id
     })
@@ -51,9 +49,9 @@ export class QuizCarousel extends Component {
         </div>
         <div className="quiz-body">
           <Navigation currentId={currentId} characters={characters} handleClick={this.setCharacter} />
-          currentCharacter && <Question characters={characters} />
-          
-
+          {
+            currentCharacter && <Question character={currentCharacter} />
+          }
         </div>
         <div className="arrow-button-wrapper right">
           <button disabled={currentId === characters.length} onClick={() => this.handleMainArrowClick(1)}>

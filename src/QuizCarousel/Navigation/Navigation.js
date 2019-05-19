@@ -4,7 +4,6 @@ import React, { Component, Fragment } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 import "./navigation.scss"
-
 export class Navigation extends Component {
   constructor(props){
     super(props)
@@ -14,7 +13,7 @@ export class Navigation extends Component {
     }
   }
 
-  MAX_ITEMS_TO_RENDER = 20
+  MAX_ITEMS_TO_RENDER = 16
 
   handleNavButtonClick = (val) => {
     const { characters } = this.props
