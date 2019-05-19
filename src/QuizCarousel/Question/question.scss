@@ -12,7 +12,7 @@ section.question-section {
     h4{
       display: flex;
       justify-content: center;
-
+      margin: 20px;
     }
     ul.answer-choices {
       list-style: none;
@@ -23,7 +23,16 @@ section.question-section {
       flex-wrap: wrap;
 
       li.choice {
-        flex: 1 33%
+        flex: 1 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+          margin-right: 5px;
+        }
+        label{
+          margin: 0;
+        }
       }
     }
   }
