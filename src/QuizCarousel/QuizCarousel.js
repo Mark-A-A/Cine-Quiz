@@ -98,7 +98,7 @@ export class QuizCarousel extends Component {
           </button>
         </div>
         <section id="submit-section">
-          <Button color="danger" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
+          <Button color="primary" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
           <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal}/>
         </section>
       </div>
