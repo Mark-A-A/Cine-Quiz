@@ -1,7 +1,7 @@
 .navigation-wrapper {
   padding: 10px 5px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   
   button {
     width: 25px;
@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
   }
   button.active{
     background-color: red;
