@@ -50,7 +50,7 @@ export class QuizCarousel extends Component {
         <div className="quiz-body">
           <Navigation currentId={currentId} characters={characters} handleClick={this.setCharacter} />
           {
-            currentCharacter && <Question character={currentCharacter} />
+            currentCharacter && <Question {...currentCharacter} currentId={currentId} />
           }
         </div>
         <div className="arrow-button-wrapper right">

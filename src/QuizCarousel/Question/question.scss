@@ -1,0 +1,29 @@
+section.question-section {
+  padding: 10px;
+
+  poster {
+    img {
+      width: 250px;
+      height: 380px;
+    }
+  }
+  question {
+    width: 100%;
+    h4{
+      display: flex;
+      justify-content: center;
+
+    }
+    choices {
+      padding: 0 25px;
+      display: flex;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      choice {
+        flex: 1 33%
+      }
+    }
+  }
+}

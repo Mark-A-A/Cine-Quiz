@@ -3,7 +3,7 @@
     "character": "Spider-Man",
     "name": "Peter Benjamin Parker",
     "link": "http://marvel.com/characters/54/spider-man",
-    "img": "https://www.gannett-cdn.com/-mm-/e8b32e5472ec96557aa56afe90c4d6c2a8b8a358/c=454-109-1816-1133/local/-/media/2016/12/06/USATODAY/USATODAY/636166399392431756-TRC0200-v005-036854.1094.jpg?width=534&height=401&fit=crop",
+    "img": "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg",
     "question": "Where does Spidey live?",
     "choices": ["The Bronx", "Manhattan", "Queens"]
   },
@@ -20,7 +20,7 @@
     "name": "Robert Bruce Banner",
     "link": "http://marvel.com/characters/25/hulk",
     "img": "https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_%28comics_character%29.png",
-    "question": "What radiation transformed Bruce into the Hulk ",
+    "question": "What radiation transformed Bruce into the Hulk?",
     "choices": ["Gamma", "Nuclear", "UV"]
   },
   {
@@ -100,7 +100,7 @@
     "name": "Erik",
     "link": "https://www.marvel.com/characters/erik-killmonger",
     "img": "https://upload.wikimedia.org/wikipedia/en/e/e6/Black_Panther_Vol4_37.jpg",
-    "question": "What is KillMonger's first name",
+    "question": "What is KillMonger's first name?",
     "choices": ["Kirk", "Erik", "Eric"]
   },
   {
@@ -108,8 +108,8 @@
     "name": "Unrevealed",
     "link": "http://marvel.com/characters/1552/mystique",
     "img": "https://upload.wikimedia.org/wikipedia/en/6/60/Mystique_%28Rebecca_Romijn%29.jpg",
-    "question": "Who play Mystique? ",
-    "choices": ["Rebecca Romijn", "Natalia Romanova", "Elizabeth Olsen"]
+    "question": "Who played Mystique first? ",
+    "choices": ["Rebecca Romijn", "Jennifer Lawrence", "Elizabeth Olsen"]
   },
   {
     "character": "Red Skull",
@@ -139,7 +139,7 @@
     "character": "Thanos",
     "name": "Thanos",
     "link": "http://marvel.com/characters/58/thanos",
-    "img": "https: //upload.wikimedia.org/wikipedia/en/c/cd/Thanos_Infinity_4.png",
+    "img": "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg",
     "question": "What stone does Thanos take from Vision?",
     "choices": ["Power", "Vision", "Mind"]
   },
@@ -147,7 +147,7 @@
     "character": "Hawk Eye",
     "name": "Clint Barton",
     "link": "http://marvel.com/characters/271/black_cat",
-    "img": "https://en.wikipedia.org/wiki/File:Jeremy_Renner_SDCC_2014_crop.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/en/f/ff/Avengers_Age_of_Ultron_poster.jpg",
     "question": "Who plays Hawk Eye?",
     "choices": ["Benedict Cumberbash", "Robert Downey,Jr.", "Jeremy Renner"]
   },
