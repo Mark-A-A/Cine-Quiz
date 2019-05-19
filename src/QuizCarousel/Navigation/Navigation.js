@@ -13,7 +13,7 @@ export class Navigation extends Component {
     }
   }
 
-  MAX_ITEMS_TO_RENDER = 16
+  MAX_ITEMS_TO_RENDER = 20
 
   handleNavButtonClick = (val) => {
     const { characters } = this.props

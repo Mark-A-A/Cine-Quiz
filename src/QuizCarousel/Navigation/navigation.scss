@@ -3,14 +3,20 @@
   display: flex;
   justify-content: space-evenly;
   
+  button.nav-button {
+    padding: 2px;
+  }
+
   button {
-    width: 25px;
+    width: 22px;
     margin: 0 2px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    border-radius: 5px;
   }
+
   button.active{
     background-color: red;
   }
