@@ -8,17 +8,21 @@ import { SubmitModal } from "./SubmitModal"
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
-import characters from './marvel.json'
+// import characters from './marvel.json'
 
 import "./carousel.scss"
 export class QuizCarousel extends Component {
-  state = {
-    currentId: 1,
-    characters: characters,
-    askToSubmitModal: false
+  constructor(props){
+    super(props)
+    this.state = {
+      currentId: 1,
+      // characters: characters,
+      askToSubmitModal: false
+    }
   }
 
   componentDidMount(){
+    const {characters = [] } = this.props
     const reducer = (acc, char, i) => {
       acc[i + 1] = null
       return acc
@@ -62,13 +66,13 @@ export class QuizCarousel extends Component {
   }
   
   render() {
+    const { characters } = this.props
     const {
       currentId,
-      characters,
       answers,
       askToSubmitModal
     } = this.state
-  
+
     const currentCharacter = characters[currentId - 1]
     
     const currentAnswer = answers ? answers[currentId] : null
