@@ -5,6 +5,6 @@ export const API = {
     return axios.get("/api/characters");
   },
   submitAnswers: function(answersObj) {
-    return axios.post("/api/quiz/answers", JSON.stringify(answersObj) );
+    return axios.post("/api/quiz/answers", answersObj );
   }
 }

@@ -27,7 +27,7 @@ class App extends Component {
       .then((response) => {
         this.setState({
           fetching:false,
-          characters: response.data.characters
+          characters: response.data
         });
       }).catch((e) => {
         this.setState({
