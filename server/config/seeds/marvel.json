@@ -44,7 +44,7 @@
       "question": "Who plays Black Widow?",
       "choices": [
         "Natalia Romanova",
-        "Scarlett Johansen",
+        "Scarlett Johansson",
         "Rachel McAdams"
       ]
     },
@@ -65,7 +65,7 @@
       "name": "Matthew Michael Murdock",
       "link": "http://marvel.com/characters/11/daredevil",
       "img": "https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG",
-      "question": "What part of Manhattan does Daredevil live?",
+      "question": "What part of NYC does Daredevil live?",
       "choices": [
         "Queens",
         "Brooklyn",
@@ -81,7 +81,7 @@
       "choices": [
         "Steel",
         "Vibranium",
-        "Admantium"
+        "Adamantium"
       ]
     },
     {
@@ -128,7 +128,7 @@
       "question": "What did Ant Man use to do for a living?",
       "choices": [
         "Chef",
-        "Robber",
+        "Thief",
         "Real Estate Agent"
       ]
     },

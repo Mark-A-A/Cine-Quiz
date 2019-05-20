@@ -1,4 +1,4 @@
-const  characters= require('../config/seeds')
+const  { characters }= require('../config/seeds')
 
 const TAG = "Controllers - getCharacters"
 

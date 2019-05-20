@@ -2,13 +2,13 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
 
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+
 import { Navigation } from "./Navigation"
 import { Question } from "./Question"
 import { SubmitModal } from "./SubmitModal"
 
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-
-// import characters from './marvel.json'
+import { API } from '../utils'
 
 import "./carousel.scss"
 export class QuizCarousel extends Component {
@@ -43,14 +43,28 @@ export class QuizCarousel extends Component {
   }
   
   handleMainArrowClick = (val) => {
-    const { currentId,
-    } = this.state
+    const { currentId } = this.state
     
     const nextValue = currentId + val
     
     this.setState({
       currentId: nextValue
     })
+  }
+
+  handleSubmitQuiz = () => {
+    const { answers } = this.state
+    API.submitAnswers(answers)
+      .then((response) => {
+        console.log("handleSubmitQuiz")
+        console.log("response")
+        console.dir(response)
+      }).catch((e) => {
+        this.setState({
+          fetching: false,
+          error: e
+        });
+      })
   }
 
   setCharacter=(id)=>{
@@ -103,7 +117,7 @@ export class QuizCarousel extends Component {
         </div>
         <section id="submit-section">
           <Button color="primary" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
-          <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal}/>
+          <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal} handleSubmitQuiz={this.handleSubmitQuiz}/>
         </section>
       </div>
     )

@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import { FaRegCopyright } from 'react-icons/fa';
 import { QuizCarousel } from './QuizCarousel'
 
-import {API} from './utils'
+import { API } from './utils'
+
 import './App.scss';
-import { isArray } from 'util';
 
 class App extends Component {
   constructor(){
@@ -14,8 +14,8 @@ class App extends Component {
       characters: null,
     }
   }
-  componentDidMount = () => {
 
+  componentDidMount = () => {
     this.setState({
       fetching: true
     })
@@ -36,6 +36,7 @@ class App extends Component {
         });
       })
   }
+
   render(){
     const {
       fetching,

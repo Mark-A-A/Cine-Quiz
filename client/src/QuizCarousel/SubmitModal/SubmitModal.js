@@ -11,13 +11,13 @@ import {
 
 import "./SubmitModal.scss"
 
-export function SubmitModal({modalOpen, toggle}) {
+export function SubmitModal({ modalOpen, toggle, handleSubmitQuiz}) {
   return (
     <div>
-      <Modal isOpen={modalOpen} toggle={toggle} className="submit-modal" backdrop={false}>
+      <Modal isOpen={modalOpen} toggle={toggle} className="submit-modal" backdrop={true}>
         <ModalHeader toggle={toggle}>Are you ready to submit your quiz?</ModalHeader>
         <ModalBody>
-          <Button color="success" onClick={toggle}>Yes</Button>
+          <Button color="success" onClick={handleSubmitQuiz}>Yes</Button>
           <Button color="danger" onClick={toggle}>No</Button>
         </ModalBody>
       </Modal>
