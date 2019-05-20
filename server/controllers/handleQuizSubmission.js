@@ -19,7 +19,7 @@ export const handleQuizSubmission = (req, res) => {
     if (!(userAnswer === null)) {
       acc.totalAnswered +=1
     }else {
-      acc.totalUnAnswered +=1
+      acc.totalUnanswered +=1
     }
     
     if (userAnswer === correctAnswer){

@@ -83,6 +83,7 @@ export class QuizCarousel extends Component {
       askToSubmitModal: !prevState.askToSubmitModal
     }));
   }
+
   toggleResultsModal = () => {
     this.setState(prevState => ({
       resultsModal: !prevState.resultsModal
@@ -95,7 +96,8 @@ export class QuizCarousel extends Component {
       currentId,
       answers,
       askToSubmitModal,
-      resultsModal
+      resultsModal,
+      results = null
     } = this.state
 
     const currentCharacter = characters[currentId - 1]
@@ -129,7 +131,10 @@ export class QuizCarousel extends Component {
         <section id="submit-section">
           <Button color="primary" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
           <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal} handleSubmitQuiz={this.handleSubmitQuiz}/>
-          <ResultsModal modalOpen={resultsModal} toggle={this.toggleResultsModal} handleResetQuiz={this.resetQuiz}/>
+          { 
+            results &&
+            <ResultsModal modalOpen={resultsModal} toggle={this.toggleResultsModal} handleResetQuiz={this.resetQuiz} results={results}/>
+          }
         </section>
       </div>
     )
