@@ -30,7 +30,7 @@ export function ResultsModal({
         <ModalBody>
         <div className="results-tables">
           <section className="summary-table">
-            <Table size="sm">
+              <Table size="sm" borderless>
               <thead>
                 <tr>
                   <th>Total Answered</th>
@@ -50,7 +50,7 @@ export function ResultsModal({
             </Table>
           </section>
           <section className="questions-answers-table">
-            <Table size="sm">
+              <Table size="sm" borderless hovered>
               <thead>
                 <tr>
                   <th>#</th>
