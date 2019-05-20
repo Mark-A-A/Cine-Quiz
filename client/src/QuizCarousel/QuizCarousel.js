@@ -6,7 +6,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 import { Navigation } from "./Navigation"
 import { Question } from "./Question"
-import { SubmitModal } from "./SubmitModal"
+import { SubmitModal, ResultsModal } from "./Modals"
 
 import { API } from '../utils'
 
@@ -17,7 +17,8 @@ export class QuizCarousel extends Component {
     this.state = {
       currentId: 1,
       // characters: characters,
-      askToSubmitModal: false
+      askToSubmitModal: false,
+      resultsModal: false,
     }
   }
 
@@ -56,9 +57,13 @@ export class QuizCarousel extends Component {
     const { answers } = this.state
     API.submitAnswers(answers)
       .then((response) => {
-        console.log("handleSubmitQuiz")
-        console.log("response")
-        console.dir(response)
+        this.toggleSubmitModal()
+
+        const {data} = response
+        this.setState({
+          results: data
+        });
+        this.toggleResultsModal()
       }).catch((e) => {
         this.setState({
           fetching: false,
@@ -78,13 +83,19 @@ export class QuizCarousel extends Component {
       askToSubmitModal: !prevState.askToSubmitModal
     }));
   }
+  toggleResultsModal = () => {
+    this.setState(prevState => ({
+      resultsModal: !prevState.resultsModal
+    }));
+  }
   
   render() {
     const { characters } = this.props
     const {
       currentId,
       answers,
-      askToSubmitModal
+      askToSubmitModal,
+      resultsModal
     } = this.state
 
     const currentCharacter = characters[currentId - 1]
@@ -118,6 +129,7 @@ export class QuizCarousel extends Component {
         <section id="submit-section">
           <Button color="primary" onClick={this.toggleSubmitModal}>Submit Quiz</Button>
           <SubmitModal modalOpen={askToSubmitModal} toggle={this.toggleSubmitModal} handleSubmitQuiz={this.handleSubmitQuiz}/>
+          <ResultsModal modalOpen={resultsModal} toggle={this.toggleResultsModal} handleResetQuiz={this.resetQuiz}/>
         </section>
       </div>
     )
